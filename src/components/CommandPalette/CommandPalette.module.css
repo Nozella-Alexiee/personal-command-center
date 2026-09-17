@@ -1,0 +1,199 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 14vh;
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
+  z-index: 100;
+  animation: fadeIn 0.12s ease-out;
+}
+
+.palette {
+  width: 100%;
+  max-width: 560px;
+  background-color: var(--color-bg-base);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: scaleIn 0.12s ease-out;
+}
+
+.inputWrap {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-bottom: var(--border-width-thin) solid var(--color-border);
+}
+
+.searchIcon {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  font-family: inherit;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.escBadge {
+  font-size: 0.625rem;
+  font-family: var(--font-family-mono);
+  color: var(--color-text-muted);
+  background-color: var(--color-bg-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  padding: 1px 5px;
+  border-radius: var(--radius-xs);
+}
+
+.resultsList {
+  max-height: 340px;
+  overflow-y: auto;
+  padding: var(--spacing-2);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.groupLabel {
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 8px 2px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+  background: transparent;
+  border: none;
+  width: 100%;
+}
+
+.itemActive {
+  background-color: var(--color-bg-surface-hover);
+  color: var(--color-text-primary);
+}
+
+.itemLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  min-width: 0;
+}
+
+.itemIcon {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.itemActive .itemIcon {
+  color: var(--color-text-primary);
+}
+
+.itemTitle {
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemSubtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-left: 6px;
+}
+
+.itemRight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.itemBadge {
+  font-size: 0.625rem;
+  font-family: var(--font-family-mono);
+  padding: 1px 5px;
+  border-radius: var(--radius-xs);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-muted);
+  border: var(--border-width-thin) solid var(--color-border);
+}
+
+.emptyState {
+  padding: var(--spacing-8) var(--spacing-4);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px var(--spacing-4);
+  background-color: var(--color-bg-surface);
+  border-top: var(--border-width-thin) solid var(--color-border);
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+}
+
+.footerHints {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.footerHint {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.kbd {
+  font-family: var(--font-family-mono);
+  background-color: var(--color-bg-base);
+  border: var(--border-width-thin) solid var(--color-border);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 0.625rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}

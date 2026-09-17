@@ -1,0 +1,267 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.titleGroup {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-2);
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.01em;
+}
+
+.countBadge {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-family: var(--font-family-mono);
+}
+
+.addBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: 6px 12px;
+  background-color: var(--color-accent);
+  color: var(--color-accent-fg);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  transition: opacity var(--transition-fast);
+}
+
+.addBtn:hover {
+  opacity: 0.9;
+}
+
+.controlsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.categoryGroup {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.catBtn {
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  font-size: 0.6875rem;
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+
+.catBtn:hover {
+  color: var(--color-text-primary);
+  border-color: var(--color-border-hover);
+}
+
+.catBtnActive {
+  background-color: var(--color-accent);
+  color: var(--color-accent-fg);
+  border-color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Add Form Card */
+.addCard {
+  background-color: var(--color-bg-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  animation: fadeIn 0.15s ease-out;
+}
+
+.formRow {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1;
+  min-width: 130px;
+  padding: 6px 10px;
+  font-size: var(--font-size-xs);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-xs);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+}
+
+.input:focus {
+  border-color: var(--color-accent);
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+}
+
+.cancelBtn {
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.saveBtn {
+  padding: 4px 12px;
+  border-radius: var(--radius-xs);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  background-color: var(--color-accent);
+  color: var(--color-accent-fg);
+}
+
+/* List */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bookmarkItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: var(--border-width-thin) solid transparent;
+  background-color: var(--color-bg-base);
+  transition: all var(--transition-fast);
+}
+
+.bookmarkItem:hover {
+  background-color: var(--color-bg-surface);
+  border-color: var(--color-border-subtle);
+}
+
+.bookmarkLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  flex: 1;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.faviconWrap {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.favicon {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  object-fit: contain;
+}
+
+.fallbackIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-muted);
+}
+
+.bookmarkInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.bookmarkTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.01em;
+}
+
+.bookmarkHost {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-family-mono);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tagAndActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.categoryTag {
+  font-size: 0.625rem;
+  font-family: var(--font-family-mono);
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+  background-color: var(--color-bg-surface-hover);
+  color: var(--color-text-secondary);
+  border: var(--border-width-thin) solid var(--color-border-subtle);
+}
+
+.deleteBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-xs);
+  color: var(--color-text-muted);
+  opacity: 0;
+  transition: all var(--transition-fast);
+}
+
+.bookmarkItem:hover .deleteBtn {
+  opacity: 1;
+}
+
+.deleteBtn:hover {
+  color: var(--color-danger);
+  background-color: var(--color-danger-bg);
+}
+
+.emptyState {
+  padding: var(--spacing-6) 0;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
